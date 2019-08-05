@@ -1,0 +1,33 @@
+class Person:                           #클래스는 함수와 변수의 집합
+  #name = '워니'                         #변수
+  def __init__(self, name, age):      #초기화 함수로 self를 첫인자로 받고 사용할 변수들을 설정.
+    self.name = name             #Person이라는 object를 만들때 name이라는 인자를 받아서 name이라는 변수안에 그값을 넣어라 
+    self.age = age
+
+  def say_hello(self, to_name):            #self : 만들어진 물체(Object함수)에 변수를 활용해야 할때.
+    print("안녕! " + to_name + " 나는 "+ self.name)
+
+  def introduce(self):
+    print("내이름은 " + self.name + " 나이는 "+ str(self.age))
+
+wonie = Person("워니", 20)
+michael = Person("마이클", 21)
+jenny = Person("제니", 22)
+
+wonie.say_hello("철수")                       #안녕! 철수 나는 워니
+wonie.introduce()                             #내이름은 워니 나이는 20
+michael.say_hello("영희")                     #안녕! 영희 나는 마이클
+jenny.say_hello("미지")                       #안녕! 미지 나는 제니
+
+class Police(Person):     #상속
+  def arrest(self, to_arrest):
+    print("넌 체포되었다 " + to_arrest)
+
+class Programmer(Person):
+  def program(self, to_program):
+    print("다음에 뭘 만들지 이걸만들자 "+ to_program)
+
+wonie2 = Police("워니",20)                  
+michael = Programmer("마이클",22)        
+michael.program("이멜")                  #다음에 뭘 만들지 이걸만들자 이멜
+wonie2.arrest("제니")                    #넌 체포되었다 
