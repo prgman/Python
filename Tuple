@@ -1,0 +1,8 @@
+x = (1,2,3)
+y = ("hello", 'world')
+
+print(x +y)         
+print("hello"in y)     #True
+print(x.index(3))    #2
+
+# x[0] = 4 이건 Tuple에서 안됨.
