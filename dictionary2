@@ -1,0 +1,25 @@
+x = dict()   
+y = {}
+print(x)    #{}
+print(y)    #{}
+
+x = {
+  "name" : "sangpil",
+  "age": 45,
+  0:"hello"
+}
+
+print(x["name"])   #sangpil
+print(x["age"])    #45
+print(x[0])        #hello
+print("age"in x)   #True
+print(x.keys())    #dic_keys([name, age, 0])
+print(x.values())  #dic_values([sangpil, 45, hello])
+for key in x:
+  print("key:" + str(key))  # key: name   .......
+  print("value:" + str(x[key])) # value: sangpil .....
+
+x[0] = "world"
+x[3] = "hello"
+x["school"] = "한빛"
+print(x)              #{'name': 'sangpil', 'age':45, 0:'world',3: hello, 'school': '한빛'}
