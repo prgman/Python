@@ -1,0 +1,3 @@
+# Library를 Package라고 한다. 
+# Repl에서 폴더 생성시 폴더명이 Package명이 된다.
+# Package는 module의 합. 해당폴더 안에 file을 추가.
