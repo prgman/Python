@@ -1,0 +1,13 @@
+#먼저 geopy package를 추가한다. repl에서는 package menu에서 검색후 +하면 된다. 
+
+from geopy.geocoders import Nominatim
+
+geolocator = Nominatim(user_agent="sangpil")
+#location = geolocator.geocode("175 5th Avenue NYC")
+location = geolocator.geocode("경전철로")
+
+print(location.address)    #경전철로, 대저1동, 대저동, 강서구, 부산, 46703, 대한민국
+print((location.latitude, location.longitude))   #(35.1956939, 128.9634735)
+print(location.raw)
+
+#{'place_id': 113736069, 'licence': 'Data © OpenStreetMap contributors, ODbL1.0. https://osm.org/copyright', 'osm_type': 'way', 'osm_id': 165487536, 'boundingbox': ['35.1951428', '35.2123119', '128.963203', '128.9634788'], 'lat': '35.1956939', 'lon': '128.9634735', 'display_name': '경전철로, 대저1동, 대저동, 강서구, 부산, 46703, 대한민국', 'class': 'highway', 'type': 'tertiary', 'importance': 0.21000000000000002}
