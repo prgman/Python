@@ -1,0 +1,42 @@
+7. 배포판 실행파일(.exe) 만들기
+
+
+제작한 Python 파일(.py)을 실행파일(.exe)로.
+ 
+파이썬과 PyQt5를 이용해서 제작한 GUI 프로그램을 배포하기 위해 실행 가능한 파일(.exe)로 만들 수 있습니다.
+실행파일은 파이썬이 설치되어 있지 않은 pc에서도 프로그램을 실행할 수 있도록 해줍니다.
+'PyInstaller'라는 패키지를 사용해서 간단하게 실행파일을 만들 수 있습니다.
+(PyInstaller 공식 홈페이지: https://www.pyinstaller.org/)
+
+
+PyInstaller 설치
+실행파일 만들기
+콘솔창 출력되지 않도록 하기
+실행파일 하나만 생성하기
+
+
+PyInstaller 설치
+우선 명령프롬프트에서 아래의 명령어를 통해 PyInstaller 패키지를 설치합니다.  
+pip install pyinstaller
+ 
+
+
+
+
+ 
+실행파일 만들기
+Python 파일(.py)이 있는 폴더로 이동한 다음, 이 명령어를 입력하면 해당 폴더에 실행파일이 만들어집니다.
+pyinstaller grid_layout.py
+ 
+해당 폴더에서 dist로 이동해서, 한 번 더 들어가면, 
+아래 그림과 같이 실행파일을 찾을 수 있습니다.
+더블클릭해서 실행을 해보면 아래 그림과 같이 콘솔창이 함께 출력됩니다.
+
+콘솔창 출력되지 않도록 하기
+콘솔창이 출력되지 않게 하려면 아래와 같이 명령어에 '-w' 또는 '--windowed'를 추가해줍니다.
+pyinstaller -w grid_layout.py
+
+실행파일 하나만 생성하기
+명령어에 '-F' 또는 '--onefile'을 추가해주면, 아래 그림과 같이 실행파일 하나만 생성됩니다.
+pyinstaller -w -F grid_layout.py
+ 
