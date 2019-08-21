@@ -1,13 +1,19 @@
 import random
+from collections import Counter
 
 numbers = list(range(1,46))
 weight_list = [1]*9 + [2]*9 + [3]*9 + [4]*9 + [5]*9
 weight_lotto_872 = [148/872*100]+[140/872*100]+[135/872*100]+[143/872*100]+[134/872*100]+ [135/872*100]+[136/872*100]+[138/872*100]+[110/872*100]+[143/872*100]+ [140/872*100]+ [146/872*100]+[148/872*100]+[139/872*100]+[134/872*100]+[135/872*100]+ [148/872*100]+[136/872*100]+[136/872*100]+[144/872*100]+ [135/872*100]+[108/872*100]+[113/872*100]+[138/872*100]+[132/872*100]+[137/872*100]+ [152/872*100]+[121/872*100]+[118/872*100]+[131/872*100]+ [138/872*100]+[121/872*100]+[147/872*100]+[152/872*100]+[129/872*100]+[131/872*100]+ [136/872*100]+[136/872*100]+[140/872*100]+[144/872*100]+ [120/872*100]+[130/872*100]+[161/872*100]+[131/872*100]+[135/872*100]
 
-print(weight_lotto_872)
+numbers_weighted = random.choices(numbers, weights=weight_lotto_872, k=600)
 
-i=0
-while i < 10:
-  numbers_weighted = random.choices(numbers, weights=weight_lotto_872, k=6)
-  i += 1
-  print(sorted(numbers_weighted))
+print(sorted(numbers_weighted))
+
+print ("---Counter()---")
+result = Counter(numbers_weighted)
+print (result)
+
+#for key in result:
+#    print (key, result[key])
+
+print(sorted(range(len(result)), key=lambda i: result[i], reverse=True)[:6])
