@@ -37,8 +37,8 @@ percent = percent10 + percent20 + percent30 + percent40 + percent45
 
 resultlist = []
 checkitem = [1,7,8,9,10,11,14,15,16,17,18,19,22,23,24,28,35,36,41,44,45]
-
-for i in range(200):
+count=0
+for i in range(1000):
     numbers_weighted = random.choices(numbers, percent, k=6)
     for s in numbers_weighted:
          if  s not in checkitem:
@@ -46,12 +46,15 @@ for i in range(200):
          else:
             break
 
-    resultlist = list(set(resultlist))  #list내 중복삭제.
+    resultlist = list(set(resultlist))
     if(len(resultlist)>=6):
         #reaultvalue = resultlist[0]+resultlist[1]+resultlist[2]+resultlist[3]+resultlist[4]+resultlist[5]
         print("OK", i, sorted(resultlist))
+        count += 1
         #print(str(reaultvalue))
     #else:
         #print("NG", print(i), sorted(resultlist))
     del resultlist[:]
+    if count >= 5:
+        break
 
