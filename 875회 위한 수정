@@ -1,0 +1,114 @@
+import random
+from numpy.random import choice
+from collections import Counter
+
+numbers = list(range(1,46))
+
+weight = [149, 140, 136, 143, 135, 135, 136, 138, 110, 143, \
+          140, 147, 149, 139, 135, 135, 148, 136, 137, 144, \
+          135, 108, 114, 138, 132, 137, 152, 122, 118, 131, \
+          138, 122, 148, 152, 129, 131, 136, 137, 141, 144, \
+          120, 131, 161, 131, 135]
+
+checkitem_pre = [1, 15, 19, 23, 28, 42]
+checkitem = [7,  8, 9,10,11,14,16,17,18,20,\
+             22,24,27,35,36,37,41,44,45]
+
+percent10 = []
+percent20 = []
+percent30 = []
+percent40 = []
+percent45 = []
+
+total =0
+add_pre =0
+add_no =0
+for i in range(0,45):
+    total += weight[i]
+
+add_pre = total/45*0.083/6
+add_no = total/45*0.83
+print(weight)
+weight[checkitem_pre[0]-1] = weight[checkitem_pre[0]-1]+add_pre
+weight[checkitem_pre[1]-1] = weight[checkitem_pre[1]-1]+add_pre
+weight[checkitem_pre[2]-1] = weight[checkitem_pre[2]-1]+add_pre
+weight[checkitem_pre[3]-1] = weight[checkitem_pre[3]-1]+add_pre
+weight[checkitem_pre[4]-1] = weight[checkitem_pre[4]-1]+add_pre
+weight[checkitem_pre[5]-1] = weight[checkitem_pre[5]-1]+add_pre
+print(weight)
+weight[checkitem[0]-1] = weight[checkitem[0]-1]+add_no
+weight[checkitem[1]-1] = weight[checkitem[1]-1]+add_no
+weight[checkitem[2]-1] = weight[checkitem[2]-1]+add_no
+weight[checkitem[3]-1] = weight[checkitem[3]-1]+add_no
+weight[checkitem[4]-1] = weight[checkitem[4]-1]+add_no
+weight[checkitem[5]-1] = weight[checkitem[5]-1]+add_no
+weight[checkitem[6]-1] = weight[checkitem[6]-1]+add_no
+weight[checkitem[7]-1] = weight[checkitem[7]-1]+add_no
+weight[checkitem[8]-1] = weight[checkitem[8]-1]+add_no
+weight[checkitem[9]-1] = weight[checkitem[9]-1]+add_no
+weight[checkitem[10]-1] = weight[checkitem[10]-1]+add_no
+weight[checkitem[11]-1] = weight[checkitem[11]-1]+add_no
+weight[checkitem[12]-1] = weight[checkitem[12]-1]+add_no
+weight[checkitem[13]-1] = weight[checkitem[13]-1]+add_no
+weight[checkitem[14]-1] = weight[checkitem[14]-1]+add_no
+weight[checkitem[15]-1] = weight[checkitem[15]-1]+add_no
+weight[checkitem[16]-1] = weight[checkitem[16]-1]+add_no
+weight[checkitem[17]-1] = weight[checkitem[17]-1]+add_no
+weight[checkitem[18]-1] = weight[checkitem[18]-1]+add_no
+print(weight)
+
+add_gugan10 = 7/(7+5+9+11+3)
+add_gugan20 = 5/(7+5+9+11+3)
+add_gugan30 = 9/(7+5+9+11+3)
+add_gugan40 = 11/(7+5+9+11+3)
+add_gugan45 = 3/(7+5+9+11+3)
+print(add_gugan10, add_gugan20, add_gugan30, add_gugan40, add_gugan45)
+
+for i in range(0, 9):
+    percent10.append(21.9 * weight[i] * add_gugan10)
+
+for i in range(9,19):
+    percent20.append(23.2 * weight[i] * add_gugan20)
+
+for i in range(19,29):
+    percent30.append(21.1 * weight[i] * add_gugan30)
+
+for i in range(29,39):
+    percent40.append(22.6 * weight[i] * add_gugan40)
+
+for i in range(39,45):
+    percent45.append(11.1 * weight[i] * add_gugan45)
+
+percent = percent10 + percent20 + percent30 + percent40 + percent45
+print(percent)
+#print(len(percent), len(numbers))
+
+resultlist = []
+
+count=0
+for i in range(1000):
+    numbers_weighted = random.choices(numbers, percent, k=6)
+    '''for s in numbers_weighted:
+         if  s not in checkitem:
+            resultlist.append(s)
+         else:
+            break
+    
+    resultlist = list(set(resultlist))
+    if(len(resultlist)>=6):
+        #reaultvalue = resultlist[0]+resultlist[1]+resultlist[2]+resultlist[3]+resultlist[4]+resultlist[5]
+        print("OK", i, sorted(resultlist))
+        count += 1
+        #print(str(reaultvalue))
+    #else:
+        #print("NG", print(i), sorted(resultlist))
+    del resultlist[:]
+    '''
+    numbers_weighted = list(set(numbers_weighted))
+    if(len(numbers_weighted)>=6):
+        print(sorted(numbers_weighted))
+        count +=1
+
+    if count >= 10:
+        break
+
