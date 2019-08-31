@@ -27,7 +27,7 @@ for i in range(0,45):
     total += weight[i]
 
 add_pre = total/45*0.083/6
-add_no = total/45*0.83
+add_no = total/45*0.083/1.2
 print(weight)
 weight[checkitem_pre[0]-1] = weight[checkitem_pre[0]-1]+add_pre
 weight[checkitem_pre[1]-1] = weight[checkitem_pre[1]-1]+add_pre
@@ -63,7 +63,7 @@ add_gugan30 = 9/(7+5+9+11+3)
 add_gugan40 = 11/(7+5+9+11+3)
 add_gugan45 = 3/(7+5+9+11+3)
 print(add_gugan10, add_gugan20, add_gugan30, add_gugan40, add_gugan45)
-
+print(add_pre, add_no)
 for i in range(0, 9):
     percent10.append(21.9 * weight[i] * add_gugan10)
 
