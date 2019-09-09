@@ -1,0 +1,133 @@
+import os
+from selenium import webdriver
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys #need to send keystrokes
+import time
+#from bs4 import BeautifulSoup
+
+# driver 를 설정합니다.
+driver = webdriver.Chrome('C:\\Users\\esanyun\\Downloads\\chromedriver_win32\\chromedriver.exe')
+#driver = webdriver.PhantomJS('C:\\Users\\esanyun\\Downloads\\phantomjs-2.1.1-windows\\phantomjs-2.1.1-windows\\bin\\phantomjs.exe')
+# api 가 처음 접근하는 url 을 설정합니다.
+# 네이버 로그인 페이지로 접근합니다. 자세한 url은, 크롬 `command + option + i` 키를 누르면 개발자 모드로 변경되어서, 사용하고 싶은 부분의 HTML을 긁어올수 있습니다.
+#driver.get('https://nid.naver.com/nidlogin.login')
+driver.get('http://192.168.1.146/')
+driver.maximize_window()
+
+# url 접근후 3초간 기다려줍니다. 이유는 명령어에 접근하는 시간이랑, 실제로 코드가 적용되는 시간이 차이가 있어서, 컴퓨터가 더 빠르면(?) 다음 명령어가 씹히는 경우도 있습니다.
+driver.implicitly_wait(3)
+time.sleep(1)
+# 'naver_id' 에 naverID 를, 'password' 에 비밀번호를 입력하면, 자동으로 robot이 입력을 해준다.
+
+driver.find_element_by_name('hiddenAccntId').send_keys('auto_pil@auto_pil.com')
+driver.find_element_by_name('hiddenAccntPw').send_keys('Admin12#')
+
+# 로그인 버튼을 클릭 해줍니다.
+#driver.find_element_by_xpath("(.//*[normalize-space(text()) and normalize-space(.)='Forgot the User Password?'])[1]/following::input[1]").click()
+#driver.find_element_by_xpath('//*[@id="frmNIDLogin"]/fieldset/input').click()
+#driver.find_element_by_class_name('btClassLogin').click()
+driver.find_element_by_xpath('//*[@id="loginDiv"]/div[2]/input').click()
+#menus = driver.find_element_by_css_selector('#loginDiv .btClassLogin')
+#menus.click()
+
+driver.find_element_by_xpath('//*[@id="left_MS00500"]/span/div').click()
+driver.find_element_by_xpath('//*[@id="left_MS00510"]/a').click()
+
+company_name = list(range(1000,1200))
+
+for i in range(75,88):
+    driver.implicitly_wait(20)
+    time.sleep(0.5)
+    driver.find_element_by_name('tab1_cust_name').send_keys(company_name[i])
+    domain = str(company_name[i]) + "@" + str(company_name[i])+".com"
+    driver.find_element_by_name('tab1_comp_domain').send_keys(domain)
+
+    wait = WebDriverWait(driver, 10)
+    element = wait.until(EC.element_to_be_clickable((By.ID, 'tab1_cust_acct_name')))
+    #driver.find_element_by_name('tab1_cust_acct_name').send_keys(company_name[i])
+    driver.find_element_by_id('tab1_cust_acct_name').click()
+    driver.find_element_by_id('tab1_cust_acct_name').clear()
+    driver.find_element_by_id('tab1_cust_acct_name').send_keys(company_name[i])
+
+    driver.find_element_by_xpath('//*[@id="tab1BtnAdd"]').click()
+    driver.find_element_by_name('tab1_admin_id').send_keys(company_name[i])
+    driver.find_element_by_name('tab1_admin_pwd').send_keys('Admin12#')
+    driver.find_element_by_name('tab1_admin_pwd2').send_keys('Admin12#')
+    driver.find_element_by_name('tab1_admin_name').send_keys(company_name[i])
+    driver.find_element_by_name('tab1_admin_email').send_keys(domain)
+    driver.find_element_by_name('tab1_contact_name').send_keys(company_name[i])
+    driver.find_element_by_name('tab1_contact_email').send_keys(domain)
+    driver.find_element_by_xpath('//*[@id="btnTab1Next"]').click()
+
+    driver.implicitly_wait(2000)
+    driver.find_element_by_name('tab2_site_name').send_keys(company_name[i])
+    driver.find_element_by_name('tab2_address1').send_keys(domain)
+    driver.find_element_by_name('tab2_addr_city').send_keys(company_name[i])
+    driver.find_element_by_name('tab2_postcode').send_keys(company_name[i])
+    driver.find_element_by_xpath('//*[@id="tab2BtnAdd"]').click()
+    driver.find_element_by_xpath('//*[@id="btnTab2Next"]').click()
+    driver.find_element_by_xpath('//*[@id="btnTab3Next"]').click()
+    driver.find_element_by_xpath('//*[@id="btnTab5Next"]').click()
+
+    driver.find_element_by_name('tab6_item_cod_1112').send_keys('10')
+    driver.implicitly_wait(1000)
+    driver.find_element_by_xpath('//*[@id="btnTab6Next"]').click()
+    driver.implicitly_wait(1000)
+    driver.find_element_by_xpath('//*[@id="btnTab7Next"]').click()
+    driver.implicitly_wait(1000)
+    driver.find_element_by_xpath('//*[@id="btnTab8Next"]').click()
+    driver.implicitly_wait(1000)
+    driver.find_element_by_xpath('//*[@id="btnTab9Next"]').click()
+    driver.implicitly_wait(1000)
+    driver.find_element_by_xpath('//*[@id="btnTab10Submit"]').click()
+    time.sleep(0.5)
+    driver.find_element_by_xpath('//*[@id="confirm1_p"]/div/div[3]/ul/li[1]/input').click()
+    time.sleep(0.5)
+    driver.find_element_by_xpath('//*[@id="confirm2_p"]/div/div[3]/ul/li[1]/input').click()
+    time.sleep(1)
+    driver.find_element_by_xpath("//*[@id='btnPopFinalConfirm']").click()
+    #wait = WebDriverWait(driver, 10)
+    #element = wait.until(EC.element_to_be_clickable((By.ID, 'btnPopFinalConfirm')))
+    #elem = WebDriverWait(driver, 3).until(EC.presence_of_element_located((By.XPATH, "//*[@id='btnPopFinalConfirm']")))
+    #elem.click()
+    #wait = WebDriverWait(driver, 10)
+    #element = wait.until(element_has_css_class((By.ID, 'btnPopFinalConfirm'), "btClassSave"))
+    #element.click()
+    time.sleep(1)
+    driver.find_element_by_xpath("//*[@id='confirm2_p']/div/div[3]/ul/li[1]/input").click()
+    time.sleep(1)
+    driver.find_element_by_xpath("//*[@id='alert3_p']/div/div[3]/ul/li/input").click()
+
+#   element = driver.find_element_by_class_name('btnPopFinalConfirm')
+#   driver.execute_script("arguments[0].click();", element)
+    # WebDriverWait와 .until 옵션을 통해 우리가 찾고자 하는 HTML 요소를
+    # 기다려 줄 수 있습니다.
+   #title = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, "btnPopFinalConfirm")))
+    #print(title.text)
+'''    try:
+        element = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((By.ID, "btnPopFinalConfirm"))
+        )
+    finally:
+        #driver.find_element_by_xpath('//*[@id="btnPopFinalConfirm"]').click()
+        driver.find_element_by_id('btnPopFinalConfirm').click()
+'''''
+    #xpath = '//*[@id="btnPopFinalConfirm"]'
+# wait for Fastrack menu item to appear, then click it
+
+
+#<input type="button" value="Final Confirm" id="btnPopFinalConfirm" class="btClassSave">
+
+'''
+# Naver 페이 들어가기
+driver.get('https://order.pay.naver.com/home')
+html = driver.page_source
+soup = BeautifulSoup(html, 'html.parser')
+notices = soup.select('div.p_inr > div.p_info > a > span')
+
+for n in notices:
+    print(n.text.strip())
+
+'''
