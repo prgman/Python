@@ -1,0 +1,82 @@
+import random
+from numpy.random import choice
+from collections import Counter
+
+company_name = 1
+domain = str(company_name) + "@" + str(company_name)+".com"
+print(domain)
+numbers = list(range(1,46))
+
+weight = [149, 140, 136, 143, 135, 135, 136, 138, 110, 143, \
+          140, 147, 149, 139, 135, 135, 148, 136, 138, 144, \
+          135, 109, 114, 138, 132, 137, 152, 122, 118, 132, \
+          138, 122, 148, 153, 129, 132, 136, 137, 142, 144, \
+          120, 131, 161, 132, 135]
+
+checkitem_pre = [19, 22, 30, 34, 39, 44]
+checkitem = [7,  8, 9,10,11,14,16,17,18,20,\
+             21,24,25,27,31,35,37,40,41,45]
+
+percent10 = []
+percent20 = []
+percent30 = []
+percent40 = []
+percent45 = []
+
+total =0
+add_pre =0
+add_no =0
+for i in range(0,45):
+    total += weight[i]
+
+add_pre = total/45*0.083/6
+add_no = total/45*0.083/1.2
+print(weight)
+for i in range(0,6):
+    weight[checkitem_pre[i]-1] = weight[checkitem_pre[i]-1]+add_pre
+
+print(weight)
+
+for i in range(0,19):
+    weight[checkitem[i]-1] = weight[checkitem[i]-1]+add_no
+
+print(weight)
+
+add_gugan10 = 7/(7+6+8+11+3)
+add_gugan20 = 6/(7+6+8+11+3)
+add_gugan30 = 8/(7+6+8+11+3)
+add_gugan40 = 11/(7+6+8+11+3)
+add_gugan45 = 3/(7+6+8+11+3)
+print(add_gugan10, add_gugan20, add_gugan30, add_gugan40, add_gugan45)
+print(add_pre, add_no)
+for i in range(0, 9):
+    percent10.append(21.9 * weight[i] * add_gugan10)
+
+for i in range(9,19):
+    percent20.append(23.2 * weight[i] * add_gugan20)
+
+for i in range(19,29):
+    percent30.append(21.2 * weight[i] * add_gugan30)
+
+for i in range(29,39):
+    percent40.append(22.6 * weight[i] * add_gugan40)
+
+for i in range(39,45):
+    percent45.append(11.1 * weight[i] * add_gugan45)
+
+percent = percent10 + percent20 + percent30 + percent40 + percent45
+print(percent)
+#print(len(percent), len(numbers))
+
+resultlist = []
+
+count=0
+for i in range(1000):
+    numbers_weighted = random.choices(numbers, percent, k=6)
+    numbers_weighted = list(set(numbers_weighted))
+    if(len(numbers_weighted)>=6):
+        print(sorted(numbers_weighted))
+        count +=1
+
+    if count >= 10:
+        break
