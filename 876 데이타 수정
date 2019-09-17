@@ -1,3 +1,6 @@
+#최종 리스트 중, 이 전에 출현했던 리스트 중 4개이상 일치시 제외.
+#최종리스트 중, checkitem_pre와 checkitem 중 일시하는 수가 4개이상일때 제외.
+
 import random
 from numpy.random import choice
 from collections import Counter
@@ -16,6 +19,17 @@ weight = [149, 140, 136, 143, 136, 135, 136, 138, 110, 143, \
 checkitem_pre = [5, 16, 21, 26, 34, 42]
 checkitem = [7,  8, 9,10,11,14,17,18,20,\
              24,25,27,31,35,37,40,41,45]
+
+sub = [7, 12, 20, 26, 37, 39]
+sub2 =[4, 8, 25, 28, 34, 42]
+sub3 =[4, 7, 10, 20, 21, 32]
+sub4 =[2, 6, 24, 34, 37, 45]
+sub5 =[5, 24, 35, 36, 38, 39]
+sub6 =[1, 2, 11, 16, 24, 39]
+sub7 =[1, 4, 14, 15, 32, 41]
+sub8 =[1, 2, 22, 24, 31, 33]
+sub9 =[13, 25, 27, 30, 34, 35]
+sub10 =[16, 21, 24, 31, 35, 39]
 
 percent10 = []
 percent20 = []
@@ -37,7 +51,7 @@ for i in range(0,6):
 
 print(weight)
 
-for i in range(0,19):
+for i in range(0,18):
     weight[checkitem[i]-1] = weight[checkitem[i]-1]+add_no
 
 print(weight)
@@ -75,7 +89,11 @@ for i in range(1000):
     numbers_weighted = random.choices(numbers, percent, k=6)
     numbers_weighted = list(set(numbers_weighted))
     if(len(numbers_weighted)>=6):
-        print(sorted(numbers_weighted))
+        temp = list(set(numbers_weighted) - set(checkitem_pre))
+        temp2 = list(set(checkitem) - set(numbers_weighted))
+        if(len(temp) > 2 and len(temp) < 6 and len(temp2) < 18 and len(temp2) > 12):
+          print(sorted(numbers_weighted),6-len(temp), 18-len(temp2))
+          
         count +=1
 
     if count >= 10:
