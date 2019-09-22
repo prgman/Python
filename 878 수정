@@ -21,13 +21,59 @@ win = [5,17,18,22,23,43]
 add10week =[7, 9, 10, 14, 35, 45]
 sub15week = [8, 11]
 
-sub3 =[4, 7, 10, 20, 21, 32]
-sub4 =[2, 6, 24, 34, 37, 45]
-sub5 =[5, 24, 35, 36, 38, 39]
-sub6 =[1, 2, 11, 16, 24, 39]
-sub7 =[1, 4, 14, 15, 32, 41]
-sub8 =[1, 2, 22, 24, 31, 33]
-sub9 =[13, 25, 27, 30, 34, 35]
+sub52=[2,	4,	15,	16,	20,	29]
+sub51=[2,	3,	11,	16,	26,	44]
+sub50=[2,	10,	12,	15,	22,	44]
+sub49=[4,	7,	16,	19,	33,	40]
+sub48=[6,	10,	18,	26,	37,	38]
+sub47=[14,17,	26,	31,	36,	45]
+sub46=[8,	13,	15,	23,	31,	38]
+sub45=[1,	10,	20,	27,	33,	35]
+sub44=[3,	11,	21,	30,	38,	45]
+sub43=[6,	31,	35,	38,	39,	44]
+sub42=[17,18,	19,	21,	23,	32]
+sub41=[13,20,	23,	35,	38,	43]
+sub40=[7,	13,	18,	19,	25,	26]
+sub39=[6,	7,	13,	15,	21,	43]
+sub38=[16,17,	22,	30,	37,	43]
+sub37=[7,	27,	30,	33,	35,	37]
+sub36=[1,	10,	23,	26,	28,	40]
+sub35=[2,	3,	11,	26,	37,	43]
+sub34=[9,	26,	35,	37,	40,	42]
+sub33=[4,	7,	32,	33, 40,	41]
+sub32=[6,	14,	19,	25,	34,	44]
+sub31=[7,	9,	18,	23,	28,	35]
+sub30=[8,	17,	20,	35,	36,	44]
+sub29=[1,	5,	13,	34,	39,	40]
+sub28=[9,	18,	23,	25,	35,	37]
+sub27=[1,	20,	26,	28,	37,	43]
+
+sub26=[4,	5,	7,	18,	20,	25]
+sub25=[2,	4,	21,	26,	43,	44]
+sub24=[7,	8,	27,	29,	36,	43]
+sub23=[5,	13,	17,	18,	33,	42]
+sub22=[4,	5,	6,	8,	17,	39]
+sub21=[6,	12,	17,	18,	31,	32]
+sub20=[10,	14,	18,	20,	23,	30]
+sub19=[6,	30,	38,	39,	40,	43]
+sub18=[3,	12,	13,	19,	32,	35]
+sub17=[3,	4,	9,	17,	32,	37]
+sub16=[6,	7,	24,	37,	38,	40]
+sub15=[3,	4,	16,	30,	31,	37]
+sub14=[2,	6,	12,	31,	33,	40]
+sub13=[22,	23,	25,	37,	38,	42]
+sub12=[2,	11,	21,	25,	39,	45]
+sub11=[1,	7,	36,	37,	41,	42]
+sub10=[9,	25,	30,	33,	41,	44]
+sub1=[2,	4,	16,	17,	36,	39]
+sub2=[8,	19,	25,	34,	37,	39]
+sub3 =[16,24,29,40,41,42]
+sub4 =[14,27,30,31,40,42]
+sub5 =[11,16,19,21,27,31]
+sub6 =[10,23,29,33,37,40]
+sub7 =[9,	13,	21,	25,	32,	42]
+sub8 =[2,	9,	16,	25,	26,	40]
+sub9 =[14,	15,	26,	27,	40,	42]
 
 percent10 = []
 percent20 = []
@@ -96,15 +142,69 @@ total_5=0
 total_6=0
 number =0
 winlist =[]
-for i in range(10000):
+for i in range(100000):
     numbers_weighted = random.choices(numbers, percent, k=6)
     numbers_weighted = list(set(numbers_weighted))
     if(len(numbers_weighted)>=6):
         temp = list(set(numbers_weighted) - set(checkitem_pre))
         temp2 = list(set(add5week) - set(numbers_weighted))
-        #temp3 = list(set(numbers_weighted) - set(sub15week))
+        temp3 = list(set(numbers_weighted)-set(sub3))
+        temp4 = list(set(numbers_weighted)-set(sub4))
+        temp5 = list(set(numbers_weighted)-set(sub5))
+        temp6 = list(set(numbers_weighted)-set(sub6))
+        temp7 = list(set(numbers_weighted)-set(sub7))
+        temp8 = list(set(numbers_weighted)-set(sub8))
+        temp9 = list(set(numbers_weighted)-set(sub9))
+        temp10 = list(set(numbers_weighted)-set(sub1))
+        temp11 = list(set(numbers_weighted)-set(sub2))
+        temp12 = list(set(numbers_weighted)-set(sub10))
+        temp13 = list(set(numbers_weighted)-set(sub11))
+        temp14 = list(set(numbers_weighted)-set(sub12))
+        temp15 = list(set(numbers_weighted)-set(sub13))
+        temp16 = list(set(numbers_weighted)-set(sub14))
+        temp17 = list(set(numbers_weighted)-set(sub15))
+        temp18 = list(set(numbers_weighted)-set(sub16))
+        temp19 = list(set(numbers_weighted)-set(sub17))
+        temp20 = list(set(numbers_weighted)-set(sub18))
+        temp21 = list(set(numbers_weighted)-set(sub19))
+        temp22 = list(set(numbers_weighted)-set(sub20))
+        temp23 = list(set(numbers_weighted)-set(sub21))
+        temp24 = list(set(numbers_weighted)-set(sub22))
+        temp25 = list(set(numbers_weighted)-set(sub23))
+        temp26 = list(set(numbers_weighted)-set(sub24))
+        temp27 = list(set(numbers_weighted)-set(sub25))
+        temp28 = list(set(numbers_weighted)-set(sub26))
+        temp29 = list(set(numbers_weighted)-set(sub27))
+        temp30 = list(set(numbers_weighted)-set(sub28))
+        temp31 = list(set(numbers_weighted)-set(sub29))
+        temp32 = list(set(numbers_weighted)-set(sub30))
+        temp33 = list(set(numbers_weighted)-set(sub31))
+        temp34 = list(set(numbers_weighted)-set(sub32))
+        temp35 = list(set(numbers_weighted)-set(sub33))
+        temp36 = list(set(numbers_weighted)-set(sub34))
+        temp37 = list(set(numbers_weighted)-set(sub35))
+        temp38 = list(set(numbers_weighted)-set(sub36))
+        temp39 = list(set(numbers_weighted)-set(sub37))
+        temp40 = list(set(numbers_weighted)-set(sub38))
+        temp41 = list(set(numbers_weighted)-set(sub39))
+        temp42 = list(set(numbers_weighted)-set(sub40))
+        temp43 = list(set(numbers_weighted)-set(sub41))
+        temp44 = list(set(numbers_weighted)-set(sub42))
+        temp45 = list(set(numbers_weighted)-set(sub43))
+        temp46 = list(set(numbers_weighted)-set(sub44))
+        temp47 = list(set(numbers_weighted)-set(sub45))
+        temp48 = list(set(numbers_weighted)-set(sub46))
+        temp49 = list(set(numbers_weighted)-set(sub47))
+        temp50 = list(set(numbers_weighted)-set(sub48))
+        temp51 = list(set(numbers_weighted)-set(sub49))
+        temp52 = list(set(numbers_weighted)-set(sub50))
+        temp53 = list(set(numbers_weighted)-set(sub51))
+        temp54 = list(set(numbers_weighted)-set(sub52))
+        
+
+
         sum_number = numbers_weighted[0]+numbers_weighted[1]+numbers_weighted[2]+numbers_weighted[3]+numbers_weighted[4]+numbers_weighted[5]
-        if(len(temp) > 2 and len(temp) < 6 and len(temp2) < 11 and len(temp2) > 5 and sum_number > 100 and sum_number < 181):
+        if(len(temp) > 2 and len(temp) < 6 and len(temp2) < 11 and len(temp2) > 5 and sum_number > 100 and sum_number < 181 and len(temp3) > 3 and len(temp4) > 3 and len(temp5) > 3 and len(temp6) > 3 and len(temp7) > 3 and len(temp8) > 3 and len(temp9) > 3 and len(temp10) > 3 and len(temp11) > 3 and len(temp12) > 3 and len(temp13) > 3 and len(temp14) > 3 and len(temp15) > 3 and len(temp16) > 3and len(temp17) > 3 and len(temp18) > 3 and len(temp19) > 3 and len(temp20) > 3 and len(temp21) > 3 and len(temp22) > 3 and len(temp23) > 3 and len(temp24) > 3 and len(temp25) > 3 and len(temp26) > 3 and len(temp27) > 3 and len(temp28) > 3 and len(temp29) > 3 and len(temp30) > 3 and len(temp31) > 3 and len(temp32) > 3 and len(temp33) > 3 and len(temp34) > 3 and len(temp35) > 3 and len(temp36) > 3 and len(temp37) > 3 and len(temp38) > 3 and len(temp39) > 3 and len(temp40) > 3 and len(temp41) > 3 and len(temp42) > 3and len(temp43) > 3 and len(temp44) > 3 and len(temp45) > 3 and len(temp46) > 3 and len(temp47) > 3 and len(temp48) > 3 and len(temp49) > 3 and len(temp50) > 3 and len(temp51) > 3 and len(temp52) > 3 and len(temp53) > 3 and len(temp54) > 3):
           print(number,sorted(numbers_weighted),6-len(temp), 11-len(temp2), sum_number)
           count +=1
           number +=1  
@@ -112,7 +212,8 @@ for i in range(10000):
         for s in numbers_weighted:
           if  s in win:
             winlist.append(s)
-                      
+          
+
         if(len(winlist)>=3):
           if(len(winlist)==3):
             print(winlist)
