@@ -1,0 +1,106 @@
+import random
+from numpy.random import choice
+from collections import Counter
+
+'''company_name = 1
+domain = str(company_name) + "@" + str(company_name)+".com"
+print(domain)
+'''
+numbers = list(range(1,46))
+
+weight = [149, 140, 136, 143, 137, 135, 136, 138, 110, 143, \
+          140, 148, 149, 140, 135, 136, 149, 137, 138, 144, \
+          136, 110, 115, 138, 132, 138, 152, 122, 118, 132, \
+          138, 122, 148, 154, 129, 132, 136, 137, 142, 144, \
+          120, 132, 162, 132, 135]
+
+checkitem_pre = [5, 16, 21, 26, 34, 42]
+add5week = [2, 4, 6, 20, 25, 27, 29, 31, 37, 40, 41]
+win = [5,17,18,22,23,43]
+
+add10week =[7, 9, 10, 14, 35, 45]
+sub15week = [8, 11]
+
+sub3 =[4, 7, 10, 20, 21, 32]
+sub4 =[2, 6, 24, 34, 37, 45]
+sub5 =[5, 24, 35, 36, 38, 39]
+sub6 =[1, 2, 11, 16, 24, 39]
+sub7 =[1, 4, 14, 15, 32, 41]
+sub8 =[1, 2, 22, 24, 31, 33]
+sub9 =[13, 25, 27, 30, 34, 35]
+
+percent10 = []
+percent20 = []
+percent30 = []
+percent40 = []
+percent45 = []
+
+total =0
+add_pre =0
+add_no =0
+sub_no =0
+for i in range(0,45):
+    total += weight[i]
+
+add_pre = total/45*0.083/6
+add_no = total/45*0.083/4
+add2_no = total/45*0.083/6
+#print(len(checkitem_pre))
+for i in range(0,len(checkitem_pre)):
+    weight[checkitem_pre[i]-1] = weight[checkitem_pre[i]-1]+add_pre
+
+#print(weight)
+for i in range(0,len(add5week)):
+    weight[add5week[i]-1] = weight[add5week[i]-1]+add_no
+#print(weight)
+for i in range(0,len(add10week)):
+    weight[add10week[i]-1] = weight[add10week[i]-1]+add2_no
+#print(weight)
+
+for i in range(0,len(sub15week)):
+    weight[sub15week[i]-1] = weight[sub15week[i]-1]/2
+
+add_gugan10 = 5/35 + 12/70 + 18/105
+add_gugan20 = 9/35 + 13/70 + 22/105 
+add_gugan30 = 9/35 + 19/70 + 26/105
+add_gugan40 = 8/35 + 17/70 + 27/105
+add_gugan45 = (4/35 + 9/70  + 12/105)*2
+print(add_gugan10, add_gugan20, add_gugan30, add_gugan40, add_gugan45)
+print(add_pre, add_no, add2_no)
+for i in range(0, 10):
+    percent10.append(0.219 * weight[i] * add_gugan10)
+
+for i in range(10,20):
+    percent20.append(0.232 * weight[i] * add_gugan20)
+
+for i in range(20,30):
+    percent30.append(0.212 * weight[i] * add_gugan30)
+
+for i in range(30,40):
+    percent40.append(0.226 * weight[i] * add_gugan40)
+
+for i in range(40,45):
+    percent45.append(0.111 * 2 * weight[i] * add_gugan45)
+
+percent = percent10 + percent20 + percent30 + percent40 + percent45
+print(percent)
+#print(len(percent), len(numbers))
+
+resultlist = []
+
+count=0
+for i in range(1000):
+    numbers_weighted = random.choices(numbers, percent, k=6)
+    numbers_weighted = list(set(numbers_weighted))
+    if(len(numbers_weighted)>=6):
+        temp = list(set(numbers_weighted) - set(checkitem_pre))
+        temp2 = list(set(add5week) - set(numbers_weighted))
+        #temp3 = list(set(numbers_weighted) - set(sub15week))
+        sum_number = numbers_weighted[0]+numbers_weighted[1]+numbers_weighted[2]+numbers_weighted[3]+numbers_weighted[4]+numbers_weighted[5]
+        if(len(temp) > 2 and len(temp) < 6 and len(temp2) < 11 and len(temp2) > 5 and sum_number > 100 and sum_number < 181):
+          print(sorted(numbers_weighted),6-len(temp), 11-len(temp2), sum_number)
+          
+        count +=1
+
+    if count >= 100:
+        break
