@@ -15,7 +15,8 @@ weight = [149, 140, 136, 143, 137, 135, 136, 138, 110, 143, \
           120, 132, 162, 132, 135]
 
 checkitem_pre = [5, 16, 21, 26, 34, 42]
-add5week = [2, 4, 6, 20, 25, 27, 29, 31, 37, 40, 41]
+#add5week = [2, 4, 6, 20, 25, 27, 29, 31, 37, 40, 41]
+add5week = [6,11,17,18,20,24,25,27,29,31,36,37,38,40,41]
 win = [5,17,18,22,23,43]
 
 add10week =[7, 9, 10, 14, 35, 45]
@@ -935,8 +936,8 @@ add_gugan20 = 9/35 + 13/70 + 22/105
 add_gugan30 = 9/35 + 19/70 + 26/105
 add_gugan40 = 8/35 + 17/70 + 27/105
 add_gugan45 = (4/35 + 9/70  + 12/105)*2
-print(add_gugan10, add_gugan20, add_gugan30, add_gugan40, add_gugan45)
-print(add_pre, add_no, add2_no)
+#print(add_gugan10, add_gugan20, add_gugan30, add_gugan40, add_gugan45)
+#print(add_pre, add_no, add2_no)
 for i in range(0, 10):
     percent10.append(0.219 * weight[i] * add_gugan10)
 
@@ -953,7 +954,7 @@ for i in range(40,45):
     percent45.append(0.111 * 2 * weight[i] * add_gugan45)
 
 percent = percent10 + percent20 + percent30 + percent40 + percent45
-print(percent)
+#print(percent)
 #print(len(percent), len(numbers))
 
 resultlist = []
@@ -1074,8 +1075,8 @@ for i in range(100000):
       temp100 = list(set(numbers_weighted)-set(sub100))
         
       sum_number = numbers_weighted[0]+numbers_weighted[1]+numbers_weighted[2]+numbers_weighted[3]+numbers_weighted[4]+numbers_weighted[5]
-      if(len(temp) > 2 and len(temp) < 6 and len(temp2) < 11 and len(temp2) > 5 and sum_number > 100 and sum_number < 181 and len(temp3) > 3 and len(temp4) > 3 and len(temp5) > 3 and len(temp6) > 3 and len(temp7) > 3 and len(temp8) > 3 and len(temp9) > 3 and len(temp10) > 3 and len(temp11) > 3 and len(temp12) > 3 and len(temp13) > 3 and len(temp14) > 3 and len(temp15) > 3 and len(temp16) > 3and len(temp17) > 3 and len(temp18) > 3 and len(temp19) > 3 and len(temp20) > 3 and len(temp21) > 3 and len(temp22) > 3 and len(temp23) > 3 and len(temp24) > 3 and len(temp25) > 3 and len(temp26) > 3 and len(temp27) > 3 and len(temp28) > 3 and len(temp29) > 3 and len(temp30) > 3 and len(temp31) > 3 and len(temp32) > 3 and len(temp33) > 3 and len(temp34) > 3 and len(temp35) > 3 and len(temp36) > 3 and len(temp37) > 3 and len(temp38) > 3 and len(temp39) > 3 and len(temp40) > 3 and len(temp41) > 3 and len(temp42) > 3and len(temp43) > 3 and len(temp44) > 3 and len(temp45) > 3 and len(temp46) > 3 and len(temp47) > 3 and len(temp48) > 3 and len(temp49) > 3 and len(temp50) > 3 and len(temp51) > 3 and len(temp52) > 3 and len(temp53) > 3 and len(temp54) > 3 and len(temp55) > 3 and len(temp56) > 3 and len(temp57) > 3 and len(temp58) > 3 and len(temp59) > 3 and len(temp60) > 3 and len(temp61) > 3 and len(temp62) > 3 and len(temp63) > 3 and len(temp64) > 3 and len(temp65) > 3 and len(temp66) > 3 and len(temp67) > 3 and len(temp68) > 3and len(temp69) > 3 and len(temp70) > 3 and len(temp71) > 3 and len(temp72) > 3 and len(temp73) > 3 and len(temp74) > 3 and len(temp75) > 3 and len(temp76) > 3 and len(temp77) > 3 and len(temp78) > 3 and len(temp79) > 3 and len(temp80) > 3 and len(temp81) > 3 and len(temp82) > 3 and len(temp83) > 3 and len(temp84) > 3 and len(temp85) > 3 and len(temp86) > 3 and len(temp87) > 3 and len(temp88) > 3 and len(temp89) > 3 and len(temp90) > 3 and len(temp91) > 3 and len(temp92) > 3 and len(temp93) > 3 and len(temp94) > 3and len(temp95) > 3 and len(temp96) > 3 and len(temp97) > 3 and len(temp98) > 3 and len(temp99) > 3 and len(tempa98) > 3 and len(tempa99) > 3 and len(temp100) > 3 ):
-        print(number,sorted(numbers_weighted),6-len(temp), 11-len(temp2), sum_number, len(temp100))
+      if(len(temp) > 2 and len(temp) < 6 and len(temp2) < 15 and len(temp2) > 11 and sum_number > 100 and sum_number < 181 and len(temp3) > 3 and len(temp4) > 3 and len(temp5) > 3 and len(temp6) > 3 and len(temp7) > 3 and len(temp8) > 3 and len(temp9) > 3 and len(temp10) > 3 and len(temp11) > 3 and len(temp12) > 3 and len(temp13) > 3 and len(temp14) > 3 and len(temp15) > 3 and len(temp16) > 3and len(temp17) > 3 and len(temp18) > 3 and len(temp19) > 3 and len(temp20) > 3 and len(temp21) > 3 and len(temp22) > 3 and len(temp23) > 3 and len(temp24) > 3 and len(temp25) > 3 and len(temp26) > 3 and len(temp27) > 3 and len(temp28) > 3 and len(temp29) > 3 and len(temp30) > 3 and len(temp31) > 3 and len(temp32) > 3 and len(temp33) > 3 and len(temp34) > 3 and len(temp35) > 3 and len(temp36) > 3 and len(temp37) > 3 and len(temp38) > 3 and len(temp39) > 3 and len(temp40) > 3 and len(temp41) > 3 and len(temp42) > 3and len(temp43) > 3 and len(temp44) > 3 and len(temp45) > 3 and len(temp46) > 3 and len(temp47) > 3 and len(temp48) > 3 and len(temp49) > 3 and len(temp50) > 3 and len(temp51) > 3 and len(temp52) > 3 and len(temp53) > 3 and len(temp54) > 3 and len(temp55) > 3 and len(temp56) > 3 and len(temp57) > 3 and len(temp58) > 3 and len(temp59) > 3 and len(temp60) > 3 and len(temp61) > 3 and len(temp62) > 3 and len(temp63) > 3 and len(temp64) > 3 and len(temp65) > 3 and len(temp66) > 3 and len(temp67) > 3 and len(temp68) > 3and len(temp69) > 3 and len(temp70) > 3 and len(temp71) > 3 and len(temp72) > 3 and len(temp73) > 3 and len(temp74) > 3 and len(temp75) > 3 and len(temp76) > 3 and len(temp77) > 3 and len(temp78) > 3 and len(temp79) > 3 and len(temp80) > 3 and len(temp81) > 3 and len(temp82) > 3 and len(temp83) > 3 and len(temp84) > 3 and len(temp85) > 3 and len(temp86) > 3 and len(temp87) > 3 and len(temp88) > 3 and len(temp89) > 3 and len(temp90) > 3 and len(temp91) > 3 and len(temp92) > 3 and len(temp93) > 3 and len(temp94) > 3and len(temp95) > 3 and len(temp96) > 3 and len(temp97) > 3 and len(temp98) > 3 and len(temp99) > 3 and len(tempa98) > 3 and len(tempa99) > 3 and len(temp100) > 3 ):
+        print(number,sorted(numbers_weighted),6-len(temp), 15-len(temp2), sum_number, len(temp100))
         count +=1
         number +=1  
         
