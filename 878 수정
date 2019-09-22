@@ -89,7 +89,14 @@ print(percent)
 resultlist = []
 
 count=0
-for i in range(1000):
+count_comp=0
+total_3=0
+total_4=0
+total_5=0
+total_6=0
+number =0
+winlist =[]
+for i in range(10000):
     numbers_weighted = random.choices(numbers, percent, k=6)
     numbers_weighted = list(set(numbers_weighted))
     if(len(numbers_weighted)>=6):
@@ -98,9 +105,29 @@ for i in range(1000):
         #temp3 = list(set(numbers_weighted) - set(sub15week))
         sum_number = numbers_weighted[0]+numbers_weighted[1]+numbers_weighted[2]+numbers_weighted[3]+numbers_weighted[4]+numbers_weighted[5]
         if(len(temp) > 2 and len(temp) < 6 and len(temp2) < 11 and len(temp2) > 5 and sum_number > 100 and sum_number < 181):
-          print(sorted(numbers_weighted),6-len(temp), 11-len(temp2), sum_number)
-          
-        count +=1
+          print(number,sorted(numbers_weighted),6-len(temp), 11-len(temp2), sum_number)
+          count +=1
+          number +=1  
+        
+        for s in numbers_weighted:
+          if  s in win:
+            winlist.append(s)
+                      
+        if(len(winlist)>=3):
+          if(len(winlist)==3):
+            print(winlist)
+            total_3 += 1
+          elif(len(winlist)==4):
+            print(winlist)
+            total_4 += 1
+          elif(len(winlist)==5):
+            print(winlist)
+            total_5 += 1
+          elif(len(winlist)==6):
+            print(winlist)
+            total_6 += 1
 
-    if count >= 100:
+    del winlist[:]    
+    if count >= 1000:
+        print(total_3, total_4, total_5, total_6)
         break
