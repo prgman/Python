@@ -697,107 +697,107 @@ sub15week = [8, 11]
 204	3	12	14	35	40	45
 203	1	3	11	24	30	32
 202	12	14	27	33	39	44
-201	3	11	24	38	39	44
-200	5	6	13	14	17	20
-199	14	21	22	25	30	36
-198	12	19	20	25	41	45
-197	7	12	16	34	42	45
-196	35	36	37	41	44	45
-195	7	10	19	22	35	40
-194	15	20	23	26	39	44
-193	6	14	18	26	36	39
-192	4	8	11	18	37	45
-191	5	6	24	25	32	37
-190	8	14	18	30	31	44
-189	8	14	32	35	37	45
-188	19	24	27	30	31	34
-187	1	2	8	18	29	38
-186	4	10	14	19	21	45
-185	1	2	4	8	19	38
-184	1	2	6	16	20	33
-183	2	18	24	34	40	42
-182	13	15	27	29	34	40
-181	14	21	23	32	40	45
-180	2	15	20	21	29	34
-179	5	9	17	25	39	43
-178	1	5	11	12	18	23
-177	1	10	13	16	37	43
-176	4	17	30	32	33	34
-175	19	26	28	31	33	36
-174	13	14	18	22	35	39
-173	3	9	24	30	33	34
-172	4	19	21	24	26	41
-171	4	16	25	29	34	35
-170	2	11	13	15	31	42
-169	16	27	35	37	43	45
-168	3	10	31	40	42	43
-167	24	27	28	30	36	39
-166	9	12	27	36	39	45
-165	5	13	18	19	22	42
-164	6	9	10	11	39	41
-163	7	11	26	28	29	44
-162	1	5	21	25	38	41
-161	22	34	36	40	42	45
-160	3	7	8	34	39	41
-159	1	18	30	41	42	43
-158	4	9	13	18	21	34
-157	19	26	30	33	35	39
-156	5	18	28	30	42	45
-155	16	19	20	32	33	41
-154	6	19	21	35	40	45
-153	3	8	11	12	13	36
-152	1	5	13	26	29	34
-151	1	2	10	13	18	19
-150	2	18	25	28	37	39
-149	2	11	21	34	41	42
-148	21	25	33	34	35	36
-147	4	6	13	21	40	42
-146	2	19	27	35	41	42
-145	2	3	13	20	27	44
-144	4	15	17	26	36	37
-143	26	27	28	42	43	45
-142	12	16	30	34	40	44
-141	8	12	29	31	42	43
-140	3	13	17	18	19	28
-139	9	11	15	20	28	43
-138	10	11	27	28	37	39
-137	7	9	20	25	36	39
-136	2	16	30	36	41	42
-135	6	14	22	28	35	39
-134	3	12	20	23	31	35
-133	4	7	15	18	23	26
-132	3	17	23	34	41	45
-131	8	10	11	14	15	21
-130	7	19	24	27	42	45
-129	19	23	25	28	38	42
-128	12	30	34	36	37	45
-127	3	5	10	29	32	43
-126	7	20	22	27	40	43
-125	2	8	32	33	35	36
-124	4	16	23	25	29	42
-123	7	17	18	28	30	45
-122	1	11	16	17	36	40
-121	12	28	30	34	38	43
-120	4	6	10	11	32	37
-119	3	11	13	14	17	21
-118	3	4	10	17	19	22
-117	5	10	22	34	36	44
-116	2	4	25	31	34	37
-115	1	2	6	9	25	28
-114	11	14	19	26	28	41
-113	4	9	28	33	36	45
-112	26	29	30	33	41	42
-111	7	18	31	33	36	40
-110	7	20	22	23	29	43
-109	1	5	34	36	42	44
-108	7	18	22	23	29	44
-107	1	4	5	6	9	31
-106	4	10	12	22	24	33
-105	8	10	20	34	41	45
-104	17	32	33	34	42	44
-103	5	14	15	27	30	45
-102	17	22	24	26	35	40
-101	1	3	17	32	35	45'''
+201	3	11	24	38	39	44'''
+sub200=[5,	6,	13,	14,	17,	20]
+sub199=[14,	21,	22,	25,	30,	36]
+sub198=[12,	19,	20,	25,	41,	45]
+sub197=[7,	12,	16,	34,	42,	45]
+sub196=[35,	36,	37,	41,	44,	45]
+sub195=[7,	10,	19,	22,	35,	40]
+sub194=[15,	20,	23,	26,	39,	44]
+sub193=[6,	14,	18,	26,	36,	39]
+sub192=[4,	8,	11,	18,	37,	45]
+sub191=[5,	6,	24,	25,	32,	37]
+sub190=[8,	14,	18,	30,	31,	44]
+sub189=[8,	14,	32,	35,	37,	45]
+sub188=[19,	24,	27,	30,	31,	34]
+sub187=[1,	2,	8,	18,	29,	38]
+sub186=[4,	10,	14,	19,	21,	45]
+sub185=[1,	2,	4,	8,	19,	38]
+sub184=[1,	2,	6,	16,	20,	33]
+sub183=[2,	18,	24,	34,	40,	42]
+sub182=[13,	15,	27,	29,	34,	40]
+sub181=[14,	21,	23,	32,	40,	45]
+sub180=[2,	15,	20,	21,	29,	34]
+sub179=[5,	9,	17,	25,	39,	43]
+sub178=[1,	5,	11,	12,	18,	23]
+sub177=[1,	10,	13,	16,	37,	43]
+sub176=[4,	17,	30,	32,	33,	34]
+sub175=[19,	26,	28,	31,	33,	36]
+sub174=[13,	14,	18,	22,	35,	39]
+sub173=[3,	9,	24,	30,	33,	34]
+sub172=[4,	19,	21,	24,	26,	41]
+sub171=[4,	16,	25,	29,	34,	35]
+sub170=[2,	11,	13,	15,	31,	42]
+sub169=[16,	27,	35,	37,	43,	45]
+sub168=[3,	10,	31,	40,	42,	43]
+sub167=[24,	27,	28,	30,	36,	39]
+sub166=[9,	12,	27,	36,	39,	45]
+sub165=[5,	13,	18,	19,	22,	42]
+sub164=[6,	9,	10,	11,	39,	41]
+sub163=[7,	11,	26,	28,	29,	44]
+sub162=[1,	5,	21,	25,	38,	41]
+sub161=[22,	34,	36,	40,	42,	45]
+sub160=[3,	7,	8,	34,	39,	41]
+sub159=[1,	18,	30,	41,	42,	43]
+sub158=[4,	9,	13,	18,	21,	34]
+sub157=[19,	26,	30,	33,	35,	39]
+sub156=[5,	18,	28,	30,	42,	45]
+sub155=[16,	19,	20,	32,	33,	41]
+sub154=[6,	19,	21,	35,	40,	45]
+sub153=[3,	8,	11,	12,	13,	36]
+sub152=[1,	5,	13,	26,	29,	34]
+sub151=[1,	2,	10,	13,	18,	19]
+sub150=[2,	18,	25,	28,	37,	39]
+sub149=[2,	11,	21,	34,	41,	42]
+sub148=[21,	25,	33,	34,	35,	36]
+sub147=[4,	6,	13,	21,	40,	42]
+sub146=[2,	19,	27,	35,	41,	42]
+sub145=[2,	3,	13,	20,	27,	44]
+sub144=[4,	15,	17,	26,	36,	37]
+sub143=[26,	27,	28,	42,	43,	45]
+sub142=[12,	16,	30,	34,	40,	44]
+sub141=[8,	12,	29,	31,	42,	43]
+sub140=[3,	13,	17,	18,	19,	28]
+sub139=[9,	11,	15,	20,	28,	43]
+sub138=[10,	11,	27,	28,	37,	39]
+sub137=[7,	9,	20,	25,	36,	39]
+sub136=[2,	16,	30,	36,	41,	42]
+sub135=[6,	14,	22,	28,	35,	39]
+sub134=[3,	12,	20,	23,	31,	35]
+sub133=[4,	7,	15,	18,	23,	26]
+sub132=[3,	17,	23,	34,	41,	45]
+sub131=[8,	10,	11,	14,	15,	21]
+sub130=[7,	19,	24,	27,	42,	45]
+sub129=[19,	23,	25,	28,	38,	42]
+sub128=[12,	30,	34,	36,	37,	45]
+sub127=[3,	5,	10,	29,	32,	43]
+sub126=[7,	20,	22,	27,	40,	43]
+sub125=[2,	8,	32,	33,	35,	36]
+sub124=[4,	16,	23,	25,	29,	42]
+sub123=[7,	17,	18,	28,	30,	45]
+sub122=[1,	11,	16,	17,	36,	40]
+sub121=[12,	28,	30,	34,	38,	43]
+sub120=[4,	6,	10,	11,	32,	37]
+sub119=[3,	11,	13,	14,	17,	21]
+sub118=[3,	4,	10,	17,	19,	22]
+sub117=[5,	10,	22,	34,	36,	44]
+sub116=[2,	4,	25,	31,	34,	37]
+sub115=[1,	2,	6,	9,	25,	28]
+sub114=[11,	14,	19,	26,	28,	41]
+sub113=[4,	9,	28,	33,	36,	45]
+sub112=[26,	29,	30,	33,	41,	42]
+sub111=[7,	18,	31,	33,	36,	40]
+sub110=[7,	20,	22,	23,	29,	43]
+sub109=[1,	5,	34,	36,	42,	44]
+sub108=[7,	18,	22,	23,	29,	44]
+sub107=[1,	4,	5,	6,	9,	31]
+sub106=[4,	10,	12,	22,	24,	33]
+sub105=[8,	10,	20,	34,	41,	45]
+sub104=[17,	32,	33,	34,	42,	44]
+sub103=[5,	14,	15,	27,	30,	45]
+sub102=[17,	22,	24,	26,	35,	40]
+sub101=[1,	3,	17,	32,	35,	45]
 sub100=[1,	7,	11,	23,	37,	42]
 sub99=[	1,	3,	10,	27,	29,	37]
 sub98=[	6,	9,	16,	23,	24,	32]
@@ -1073,9 +1073,109 @@ for i in range(100000):
       tempa98 = list(set(numbers_weighted)-set(sub98))
       tempa99 = list(set(numbers_weighted)-set(sub99))
       temp100 = list(set(numbers_weighted)-set(sub100))
-        
+      temp101 = list(set(numbers_weighted)-set(sub101))
+      temp102 = list(set(numbers_weighted)-set(sub102))
+      temp103 = list(set(numbers_weighted)-set(sub103))
+      temp104 = list(set(numbers_weighted)-set(sub104))
+      temp105 = list(set(numbers_weighted)-set(sub105))
+      temp106 = list(set(numbers_weighted)-set(sub106))
+      temp107 = list(set(numbers_weighted)-set(sub107))
+      temp108 = list(set(numbers_weighted)-set(sub108))
+      temp109 = list(set(numbers_weighted)-set(sub109))
+      temp110 = list(set(numbers_weighted)-set(sub110))
+      temp111 = list(set(numbers_weighted)-set(sub111))
+      temp112 = list(set(numbers_weighted)-set(sub112))
+      temp113 = list(set(numbers_weighted)-set(sub113))
+      temp114 = list(set(numbers_weighted)-set(sub114))
+      temp115 = list(set(numbers_weighted)-set(sub115))
+      temp116 = list(set(numbers_weighted)-set(sub116))
+      temp117 = list(set(numbers_weighted)-set(sub117))
+      temp118 = list(set(numbers_weighted)-set(sub118))
+      temp119 = list(set(numbers_weighted)-set(sub119))
+      temp120 = list(set(numbers_weighted)-set(sub120))
+      temp121 = list(set(numbers_weighted)-set(sub121))
+      temp122 = list(set(numbers_weighted)-set(sub122))
+      temp123 = list(set(numbers_weighted)-set(sub123))
+      temp124 = list(set(numbers_weighted)-set(sub124))
+      temp125 = list(set(numbers_weighted)-set(sub125))
+      temp126 = list(set(numbers_weighted)-set(sub126))
+      temp127 = list(set(numbers_weighted)-set(sub127))
+      temp128 = list(set(numbers_weighted)-set(sub128))
+      temp129 = list(set(numbers_weighted)-set(sub129))
+      temp130 = list(set(numbers_weighted)-set(sub130))
+      temp131 = list(set(numbers_weighted)-set(sub131))
+      temp132 = list(set(numbers_weighted)-set(sub132))
+      temp133 = list(set(numbers_weighted)-set(sub133))
+      temp134 = list(set(numbers_weighted)-set(sub134))
+      temp135 = list(set(numbers_weighted)-set(sub135))
+      temp136 = list(set(numbers_weighted)-set(sub136))
+      temp137 = list(set(numbers_weighted)-set(sub137))
+      temp138 = list(set(numbers_weighted)-set(sub138))
+      temp139 = list(set(numbers_weighted)-set(sub139))
+      temp140 = list(set(numbers_weighted)-set(sub140))
+      temp141 = list(set(numbers_weighted)-set(sub141))
+      temp142 = list(set(numbers_weighted)-set(sub142))
+      temp143 = list(set(numbers_weighted)-set(sub143))
+      temp144 = list(set(numbers_weighted)-set(sub144))
+      temp145 = list(set(numbers_weighted)-set(sub145))
+      temp146 = list(set(numbers_weighted)-set(sub146))
+      temp147 = list(set(numbers_weighted)-set(sub147))
+      temp148 = list(set(numbers_weighted)-set(sub148))
+      temp149 = list(set(numbers_weighted)-set(sub149))
+      temp150 = list(set(numbers_weighted)-set(sub150))
+      temp151 = list(set(numbers_weighted)-set(sub151))
+      temp152 = list(set(numbers_weighted)-set(sub152))
+      temp153 = list(set(numbers_weighted)-set(sub153))
+      temp154 = list(set(numbers_weighted)-set(sub154))
+      temp155 = list(set(numbers_weighted)-set(sub155))
+      temp156 = list(set(numbers_weighted)-set(sub156))
+      temp157 = list(set(numbers_weighted)-set(sub157))
+      temp158 = list(set(numbers_weighted)-set(sub158))
+      temp159 = list(set(numbers_weighted)-set(sub159))
+      temp160 = list(set(numbers_weighted)-set(sub160))
+      temp161 = list(set(numbers_weighted)-set(sub161))
+      temp162 = list(set(numbers_weighted)-set(sub162))
+      temp163 = list(set(numbers_weighted)-set(sub163))
+      temp164 = list(set(numbers_weighted)-set(sub164))
+      temp165 = list(set(numbers_weighted)-set(sub165))
+      temp166 = list(set(numbers_weighted)-set(sub166))
+      temp167 = list(set(numbers_weighted)-set(sub167))
+      temp168 = list(set(numbers_weighted)-set(sub168))
+      temp169 = list(set(numbers_weighted)-set(sub169))
+      temp170 = list(set(numbers_weighted)-set(sub170))
+      temp171 = list(set(numbers_weighted)-set(sub171))
+      temp172 = list(set(numbers_weighted)-set(sub172))
+      temp173 = list(set(numbers_weighted)-set(sub173))
+      temp174 = list(set(numbers_weighted)-set(sub174))
+      temp175 = list(set(numbers_weighted)-set(sub175))
+      temp176 = list(set(numbers_weighted)-set(sub176))
+      temp177 = list(set(numbers_weighted)-set(sub177))
+      temp178 = list(set(numbers_weighted)-set(sub178))
+      temp179 = list(set(numbers_weighted)-set(sub179))
+      temp180 = list(set(numbers_weighted)-set(sub180))
+      temp181 = list(set(numbers_weighted)-set(sub181))
+      temp182 = list(set(numbers_weighted)-set(sub182))
+      temp183 = list(set(numbers_weighted)-set(sub183))
+      temp184 = list(set(numbers_weighted)-set(sub184))
+      temp185 = list(set(numbers_weighted)-set(sub185))
+      temp186 = list(set(numbers_weighted)-set(sub186))
+      temp187 = list(set(numbers_weighted)-set(sub187))
+      temp188 = list(set(numbers_weighted)-set(sub188))
+      temp189 = list(set(numbers_weighted)-set(sub189))
+      temp190 = list(set(numbers_weighted)-set(sub190))
+      temp191 = list(set(numbers_weighted)-set(sub191))
+      temp192 = list(set(numbers_weighted)-set(sub192))
+      temp193 = list(set(numbers_weighted)-set(sub193))
+      temp194 = list(set(numbers_weighted)-set(sub194))
+      temp195 = list(set(numbers_weighted)-set(sub195))
+      temp196 = list(set(numbers_weighted)-set(sub196))
+      temp197 = list(set(numbers_weighted)-set(sub197))
+      temp198 = list(set(numbers_weighted)-set(sub198))
+      temp199 = list(set(numbers_weighted)-set(sub199))
+      temp200 = list(set(numbers_weighted)-set(sub200))
+
       sum_number = numbers_weighted[0]+numbers_weighted[1]+numbers_weighted[2]+numbers_weighted[3]+numbers_weighted[4]+numbers_weighted[5]
-      if(len(temp) > 2 and len(temp) < 6 and len(temp2) < 15 and len(temp2) > 11 and sum_number > 100 and sum_number < 181 and len(temp3) > 3 and len(temp4) > 3 and len(temp5) > 3 and len(temp6) > 3 and len(temp7) > 3 and len(temp8) > 3 and len(temp9) > 3 and len(temp10) > 3 and len(temp11) > 3 and len(temp12) > 3 and len(temp13) > 3 and len(temp14) > 3 and len(temp15) > 3 and len(temp16) > 3and len(temp17) > 3 and len(temp18) > 3 and len(temp19) > 3 and len(temp20) > 3 and len(temp21) > 3 and len(temp22) > 3 and len(temp23) > 3 and len(temp24) > 3 and len(temp25) > 3 and len(temp26) > 3 and len(temp27) > 3 and len(temp28) > 3 and len(temp29) > 3 and len(temp30) > 3 and len(temp31) > 3 and len(temp32) > 3 and len(temp33) > 3 and len(temp34) > 3 and len(temp35) > 3 and len(temp36) > 3 and len(temp37) > 3 and len(temp38) > 3 and len(temp39) > 3 and len(temp40) > 3 and len(temp41) > 3 and len(temp42) > 3and len(temp43) > 3 and len(temp44) > 3 and len(temp45) > 3 and len(temp46) > 3 and len(temp47) > 3 and len(temp48) > 3 and len(temp49) > 3 and len(temp50) > 3 and len(temp51) > 3 and len(temp52) > 3 and len(temp53) > 3 and len(temp54) > 3 and len(temp55) > 3 and len(temp56) > 3 and len(temp57) > 3 and len(temp58) > 3 and len(temp59) > 3 and len(temp60) > 3 and len(temp61) > 3 and len(temp62) > 3 and len(temp63) > 3 and len(temp64) > 3 and len(temp65) > 3 and len(temp66) > 3 and len(temp67) > 3 and len(temp68) > 3and len(temp69) > 3 and len(temp70) > 3 and len(temp71) > 3 and len(temp72) > 3 and len(temp73) > 3 and len(temp74) > 3 and len(temp75) > 3 and len(temp76) > 3 and len(temp77) > 3 and len(temp78) > 3 and len(temp79) > 3 and len(temp80) > 3 and len(temp81) > 3 and len(temp82) > 3 and len(temp83) > 3 and len(temp84) > 3 and len(temp85) > 3 and len(temp86) > 3 and len(temp87) > 3 and len(temp88) > 3 and len(temp89) > 3 and len(temp90) > 3 and len(temp91) > 3 and len(temp92) > 3 and len(temp93) > 3 and len(temp94) > 3and len(temp95) > 3 and len(temp96) > 3 and len(temp97) > 3 and len(temp98) > 3 and len(temp99) > 3 and len(tempa98) > 3 and len(tempa99) > 3 and len(temp100) > 3 ):
+      if(len(temp) > 2 and len(temp) < 6 and len(temp2) < 15 and len(temp2) > 11 and sum_number > 100 and sum_number < 181 and len(temp3) > 2 and len(temp4) > 2 and len(temp5) > 2 and len(temp6) > 2 and len(temp7) > 2 and len(temp8) > 2 and len(temp9) > 2 and len(temp10) > 2 and len(temp11) > 2 and len(temp12) > 2 and len(temp13) > 2 and len(temp14) > 2 and len(temp15) > 2 and len(temp16) > 2and len(temp17) > 2 and len(temp18) > 2 and len(temp19) > 2 and len(temp20) > 2 and len(temp21) > 2 and len(temp22) > 2 and len(temp23) > 2 and len(temp24) > 2 and len(temp25) > 2 and len(temp26) > 2 and len(temp27) > 2 and len(temp28) > 2 and len(temp29) > 2 and len(temp30) > 2 and len(temp31) > 2 and len(temp32) > 2 and len(temp33) > 2 and len(temp34) > 2 and len(temp35) > 2 and len(temp36) > 2 and len(temp37) > 2 and len(temp38) > 2 and len(temp39) > 2 and len(temp40) > 2 and len(temp41) > 2 and len(temp42) > 2and len(temp43) > 2 and len(temp44) > 2 and len(temp45) > 2 and len(temp46) > 2 and len(temp47) > 2 and len(temp48) > 2 and len(temp49) > 2 and len(temp50) > 2 and len(temp51) > 2 and len(temp52) > 2 and len(temp53) > 2 and len(temp54) > 2 and len(temp55) > 2 and len(temp56) > 2 and len(temp57) > 2 and len(temp58) > 2 and len(temp59) > 2 and len(temp60) > 2 and len(temp61) > 2 and len(temp62) > 2 and len(temp63) > 2 and len(temp64) > 2 and len(temp65) > 2 and len(temp66) > 2 and len(temp67) > 2 and len(temp68) > 2and len(temp69) > 2 and len(temp70) > 2 and len(temp71) > 2 and len(temp72) > 2 and len(temp73) > 2 and len(temp74) > 2 and len(temp75) > 2 and len(temp76) > 2 and len(temp77) > 2 and len(temp78) > 2 and len(temp79) > 2 and len(temp80) > 2 and len(temp81) > 2 and len(temp82) > 2 and len(temp83) > 2 and len(temp84) > 2 and len(temp85) > 2 and len(temp86) > 2 and len(temp87) > 2 and len(temp88) > 2 and len(temp89) > 2 and len(temp90) > 2 and len(temp91) > 2 and len(temp92) > 2 and len(temp93) > 2 and len(temp94) > 2and len(temp95) > 2 and len(temp96) > 2 and len(temp97) > 2 and len(temp98) > 2 and len(temp99) > 2 and len(tempa98) > 2 and len(tempa99) > 2 and len(temp100) > 2  and len(temp101) > 2 and len(temp102) > 2 and len(temp103) > 2 and len(temp104) > 2 and len(temp105) > 2 and len(temp106) > 2 and len(temp107) > 2 and len(temp108) > 2 and len(temp109) > 2 and len(temp110) > 2 and len(temp111) > 2 and len(temp112) > 2 and len(temp113) > 2 and len(temp114) > 2and len(temp115) > 2 and len(temp116) > 2 and len(temp117) > 2 and len(temp118) > 2 and len(temp119) > 2 and len(temp120) > 2 and len(temp121) > 2 and len(temp122) > 2 and len(temp123) > 2 and len(temp124) > 2 and len(temp125) > 2 and len(temp126) > 2 and len(temp127) > 2 and len(temp128) > 2 and len(temp129) > 2 and len(temp130) > 2 and len(temp131) > 2 and len(temp132) > 2 and len(temp133) > 2 and len(temp134) > 2 and len(temp135) > 2 and len(temp136) > 2 and len(temp137) > 2 and len(temp138) > 2 and len(temp139) > 2 and len(temp140) > 2and len(temp141) > 2 and len(temp142) > 2 and len(temp143) > 2 and len(temp144) > 2 and len(temp145) > 2 and len(temp146) > 2 and len(temp147) > 2 and len(temp148) > 2 and len(temp149) > 2 and len(temp150) > 2 and len(temp151) > 2 and len(temp152) > 2 and len(temp153) > 2 and len(temp154) > 2 and len(temp155) > 2 and len(temp156)  and len(temp157)  and len(temp158) > 2 and len(temp159) > 2 and len(temp160) > 2 and len(temp161) > 2 and len(temp162) > 2 and len(temp163) > 2 and len(temp164) > 2 and len(temp165) > 2 and len(temp166) > 2 and len(temp167) > 2 and len(temp168) > 2and len(temp169) > 2 and len(temp170) > 2 and len(temp171) > 2 and len(temp172) > 2 and len(temp173) > 2 and len(temp174) > 2 and len(temp175) > 2 and len(temp176) > 2 and len(temp177) > 2 and len(temp178) > 2 and len(temp179) > 2 and len(temp180) > 2 and len(temp181) > 2 and len(temp182) > 2 and len(temp183) > 2 and len(temp184) > 2 and len(temp185) > 2 and len(temp186) > 2 and len(temp187) > 2 and len(temp188) > 2 and len(temp189) > 2 and len(temp190) > 2 and len(temp191) > 2 and len(temp192) > 2 and len(temp193) > 2 and len(temp194) > 2and len(temp195) > 2 and len(temp196) > 2 and len(temp197) > 2 and len(temp198) > 2 and len(temp199) > 2 and len(temp200) > 2 ):
         print(number,sorted(numbers_weighted),6-len(temp), 15-len(temp2), sum_number, len(temp100))
         count +=1
         number +=1  
