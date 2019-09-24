@@ -20,7 +20,8 @@ add5week = [6,11,17,18,20,24,25,27,29,31,36,37,38,40,41]
 win = [5,17,18,22,23,43]
 
 add10week =[7, 9, 10, 14, 35, 45]
-sub15week = [8, 11]
+#이전 첫번째숫자에 +5 다음나올확율 희박함.
+sub15week = [8, 9, 11]
 #sub877=[ 5,	17,	18,	22,	23,	43]
 sub876=[ 5,	16,	21,	26,	34,	42]
 sub875=[19,	22,	30,	34,	39,	44]
@@ -932,7 +933,7 @@ for i in range(0,len(add10week)):
 
 for i in range(0,len(sub15week)):
     weight[sub15week[i]-1] = weight[sub15week[i]-1]/2
-
+#print(weight)
 add_gugan10 = 5/35 + 12/70 + 18/105
 add_gugan20 = 9/35 + 13/70 + 22/105 
 add_gugan30 = 9/35 + 19/70 + 26/105
@@ -941,22 +942,28 @@ add_gugan45 = (4/35 + 9/70  + 12/105)*2
 #print(add_gugan10, add_gugan20, add_gugan30, add_gugan40, add_gugan45)
 #print(add_pre, add_no, add2_no)
 for i in range(0, 10):
-    percent10.append(0.219 * weight[i] * add_gugan10)
+    weight[i] = 0.219 * weight[i] * add_gugan10
+    percent10.append(weight[i])
 
 for i in range(10,20):
-    percent20.append(0.232 * weight[i] * add_gugan20)
+    weight[i] = 0.232 * weight[i] * add_gugan20
+    percent20.append(weight[i])
 
 for i in range(20,30):
-    percent30.append(0.212 * weight[i] * add_gugan30)
+    weight[i] = 0.212 * weight[i] * add_gugan30
+    percent30.append(weight[i])
 
 for i in range(30,40):
-    percent40.append(0.226 * weight[i] * add_gugan40)
+    weight[i] = 0.226 * weight[i] * add_gugan40
+    percent40.append(weight[i])
 
 for i in range(40,45):
-    percent45.append(0.111 * 2 * weight[i] * add_gugan45)
+    weight[i] = 0.111 * 2 * weight[i] * add_gugan45
+    percent45.append(weight[i])
 
 percent = percent10 + percent20 + percent30 + percent40 + percent45
-#print(percent)
+print(weight)
+print(percent)
 #print(len(percent), len(numbers))
 
 resultlist = []
@@ -970,7 +977,8 @@ total_6=0
 number =0
 winlist =[]
 for i in range(200000):
-    numbers_weighted = random.choices(numbers, percent, k=6)
+    #numbers_weighted = random.choices(numbers, percent, k=6)
+    numbers_weighted = random.choices(numbers, weights=weight, k=6)
     numbers_weighted = list(set(numbers_weighted))
     if(len(numbers_weighted)>=6):
       temp = list(set(numbers_weighted) - set(checkitem_pre))
@@ -1891,6 +1899,6 @@ for i in range(200000):
            #del winlist[:]  
 
       del winlist[:]    
-    if count >= 10000:
+    if count >= 10:
         print(total_3, total_4, total_5, total_6)
         break
